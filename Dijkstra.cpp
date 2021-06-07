@@ -96,6 +96,22 @@ void Graph_SP::Dijkstra(int Start){
 }
 
 int main(){
+    Graph_SP g9(6);
+    g9.AddEdge(0, 1, 8);g9.AddEdge(0, 5, 1);
+    g9.AddEdge(1, 0, 3);g9.AddEdge(1, 2, 1);
+    g9.AddEdge(2, 0, 5);g9.AddEdge(2, 3, 2);g9.AddEdge(2, 4, 2);
+    g9.AddEdge(3, 1, 4);g9.AddEdge(3, 2, 6);g9.AddEdge(3, 4, 7);g9.AddEdge(3, 5, 3);
+    g9.AddEdge(5, 3, 2);g9.AddEdge(5, 4, 8);
+    g9.Dijkstra(0);
+
+    Graph_SP g1(7);
+    g1.AddEdge(0, 1, 2); g1.AddEdge(0, 2, 1);
+    g1.AddEdge(1, 2, 5); g1.AddEdge(1, 3, 11); g1.AddEdge(1, 4, 3);
+    g1.AddEdge(2, 5, 15);
+    g1.AddEdge(3, 4, 2);
+    g1.AddEdge(4, 2, 1); g1.AddEdge(4, 5, 4); g1.AddEdge(4, 6, 5);
+    g1.AddEdge(6, 3, 1); g1.AddEdge(6, 5, 1);
+    g1.Dijkstra(0);
 
     return 0;
 }
